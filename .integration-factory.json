@@ -5,7 +5,7 @@
   "releaseEligible": true,
   "maintainer": "jannikco",
   "license": "MIT",
-  "sourceRevision": "ea33908e4d5e10508739f28e11abf708e11f3117f1108b904229eeeb00079e55",
+  "sourceRevision": "c87df59c0b9a72373356cb543072319b1ac4537acec80313bd3116dabacfb29d",
   "evidence": [
     "Pinned public OpenAPI contract",
     "tests/leadadapter.test.mjs"
@@ -23,6 +23,48 @@
     "enrich_company_post"
   ],
   "attributionSlug": "github-linkedin-company-api",
+  "artifactType": "workflow",
+  "capabilityEvidence": {
+    "local": {
+      "level": "Tested",
+      "operations": [
+        {
+          "name": "list_companies_get",
+          "level": "Tested",
+          "evidenceRefs": [
+            "SDK/agent/workflow contract fixtures; no live provider execution"
+          ],
+          "method": "contract-fixture"
+        },
+        {
+          "name": "enrich_company_post",
+          "level": "Tested",
+          "evidenceRefs": [
+            "SDK/agent/workflow contract fixtures; no live provider execution"
+          ],
+          "method": "contract-fixture"
+        }
+      ],
+      "evidenceRefs": [
+        "SDK/agent/workflow contract fixtures; no live provider execution"
+      ],
+      "mode": "local"
+    },
+    "managed": {
+      "level": "Documented",
+      "operations": [],
+      "evidenceRefs": [],
+      "mode": "managed"
+    }
+  },
+  "qualityVersion": 2,
+  "utility": {
+    "problem": "Read stored company data and prepare company enrichment jobs.",
+    "output": "Authenticated LeadAdapter results, review reports and resumable research-to-CRM workflows"
+  },
+  "agentReady": true,
+  "version": "0.2.0",
+  "executionAuthority": "leadadapter-api",
   "factory": "leadadapter-pipmcp",
   "generatorVersion": 1
 }
